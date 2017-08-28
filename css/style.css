@@ -16,9 +16,9 @@ a {
   display: block;
 }
 
-.pfolio h4 {
+#portfolio h4 {
   margin: 0;
-  padding: 2em 0;
+  padding: 2.5em 0;
 }
 
 .bold {
@@ -53,6 +53,9 @@ body {
   padding-bottom: 0.8em;
 }
 
+#contact p {
+  font-size: 1.2em;
+}
 #contact {
   padding: 2em 0;
 }
@@ -67,6 +70,7 @@ body {
 }
 
 .sm-screen {
+
   float: right;
   font-size: 0.9em;
 }
@@ -90,9 +94,48 @@ body {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
+
   .name, li{
     display: inline-block;
+  }
+
+  li {
+    background: lightgrey;
+  }
+
+  .intro img {
+    float: right;
+    width: 50%;
+    padding-left: 1em;
+  }
+
+  .intro p {
+    font-size: 1.3em;
+    text-align: left;
+
+  }
+
+  .content {
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: top;
+    padding: 0 1em;
+  }
+
+  #contact {
+    width: 60%;
+  }
+
+  #footer {
+    padding-bottom: 2em;
+  }
+
+  .sm-screen {display: none;}
+  .mdlg-screen {
+    display: block;
+    float: right;
   }
 
   .clearfix::after {
@@ -100,6 +143,7 @@ body {
     display: table;
     clear: both;
   }
+
 }
 
 @media (min-width: 1024px) {
