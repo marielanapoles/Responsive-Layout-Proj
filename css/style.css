@@ -1,5 +1,108 @@
 * {
   box-sizing: border-box;
   font-family: 'Catamaran', monospace, sans-serif;
-  background-color: #e0e0e0;
+}
+
+/*BASE STYLE=================*/
+li {
+  background: white;
+  margin-bottom: 0.3em;
+  padding: 0.5em;
+
+}
+
+a {
+  font-weight: bold;
+  display: block;
+}
+
+.pfolio h4 {
+  margin: 0;
+  padding: 2em 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/*LAYOUT STYLE ==============*/
+body {
+  background-color: lightgrey;
+}
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro {
+  padding-top: 2.5em;
+  padding-bottom: 1.5em;
+}
+
+.content {
+  padding-bottom: 1em;
+}
+
+.content img {
+  width: 100%;
+}
+
+#portfolio {
+  background-color: white;
+  padding-bottom: 0.8em;
+}
+
+#contact {
+  padding: 2em 0;
+}
+
+#footer {
+  border-top: 1px solid grey;
+}
+
+#footer p {
+  float: left;
+  font-weight: bold;
+}
+
+.sm-screen {
+  float: right;
+  font-size: 0.9em;
+}
+
+/*MEDIA QUERIES =============*/
+@media (min-width:320px) {
+
+
+  .intro img {
+    width: 75%;
+  }
+
+  .mdlg-screen {
+    display: none;
+  }
+
+  .clearfix::after {
+    content:"";
+    display: table;
+    clear: both;
+  }
+}
+
+@media (min-width: 769px) {
+  .name, li{
+    display: inline-block;
+  }
+
+  .clearfix::after {
+    content:"";
+    display: table;
+    clear: both;
+  }
+}
+
+@media (min-width: 1024px) {
+  .name {float: left;}
+  ul {float: right;}
 }
