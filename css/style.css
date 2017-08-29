@@ -4,6 +4,7 @@
 }
 
 /*BASE STYLE=================*/
+a {display: block;}
 
 li {
   background: white;
@@ -14,7 +15,7 @@ li {
 
 /*LAYOUT STYLE ==============*/
 body {
-  background-color: lightgrey;
+  background-color: #F5F5F5;
   text-align: center;
 }
 
@@ -57,6 +58,10 @@ header h1 {
   width: 100%;
 }
 
+.col {
+  padding-bottom: 2.5em;
+}
+
 .col h4,
 .col p {
   width: 80%;
@@ -82,33 +87,26 @@ header h1 {
 }
 
 footer {
-  border-top: 1px solid black;
+  border-top: 1px solid grey;
   padding-bottom: 1em;
 }
 
 footer .name {float: left;}
+
+.sm-screen a {
+  padding-top: 10px;
+}
 
 .sm-screen,
 .mdlg-screen{
   float: right;
 }
 
-/*MEDIA QUERIES =============*/
-@media (min-width:320px) {
-  .col {
-    padding-bottom: 2.5em;
-  }
-
-  .mdlg-screen {
-    display: none;
-  }
-  .clearfix::after {
-    content:"";
-    display: table;
-    clear: both;
-  }
+.mdlg-screen {
+  display: none;
 }
 
+/*MEDIA QUERIES =============*/
 @media (min-width: 768px) {
   .wrapper {
     width: 90%;
@@ -116,7 +114,7 @@ footer .name {float: left;}
   }
   .main-nav li {
     display: inline-block;
-    background: lightgrey;
+    background: #727272;
     padding-left: 1em;
     padding-right: 1em;
   }
@@ -150,7 +148,7 @@ footer .name {float: left;}
       display: inline-block;
       padding-top: 20px;
       padding-left: 20px;
-      background-color: lightgrey;
+      background-color: #727272;
   }
 
   /*Hide/Display divs===========*/
@@ -182,7 +180,7 @@ footer .name {float: left;}
 
   .main-nav li {
     display: inline-block;
-    background: lightgrey;
+    background: #727272;
     padding: 0 0 0 3em;
   }
 
@@ -192,7 +190,7 @@ footer .name {float: left;}
   }
 
   #intro p {
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: left;
   }
   #portfolio {
