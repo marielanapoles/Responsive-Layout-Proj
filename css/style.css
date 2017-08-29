@@ -4,89 +4,104 @@
 }
 
 /*BASE STYLE=================*/
+
 li {
   background: white;
-  margin-bottom: 0.3em;
-  padding: 0.5em;
-
-}
-
-a {
-  font-weight: bold;
-  display: block;
-}
-
-#portfolio h4 {
-  margin: 0;
-  padding: 2.5em 0;
-}
-
-.bold {
+  padding: 0.25em;
+  margin-bottom: 0.25em;
   font-weight: bold;
 }
 
 /*LAYOUT STYLE ==============*/
 body {
   background-color: lightgrey;
-}
-.wrapper {
-  width: 90%;
-  margin: 0 auto;
   text-align: center;
 }
 
-.intro {
-  padding-top: 2.5em;
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  padding-top: 3em;
+  padding-bottom: 1.25em;
+}
+
+header h1 {
+  margin-top: 0;
+}
+
+#intro {
+  padding-top: 1.25em;
+  padding-bottom: 2.5em;}
+
+#intro img {
+  width: 70%;
   padding-bottom: 1.5em;
 }
 
-.content {
-  padding-bottom: 1em;
-}
-
-.content img {
-  width: 100%;
-}
+#intro p {margin: 0;}
 
 #portfolio {
   background-color: white;
-  padding-bottom: 0.8em;
+  padding-top: 2.5em;
 }
 
-#contact p {
-  font-size: 1.2em;
+#portfolio h4 {
+  margin-top: 0;
+  margin-bottom: 2em;
 }
+
+#portfolio img {
+  width: 100%;
+}
+
+.col h4,
+.col p {
+  width: 80%;
+  margin: 0 auto;
+}
+
 #contact {
-  padding: 2em 0;
+  padding: 3em 0 2.5em;
 }
 
-#footer {
-  border-top: 1px solid grey;
+#contact h4{
+  margin: 0;
+  padding-bottom: 2em;
 }
 
-#footer p {
-  float: left;
+.contact-p {
+  padding-bottom: 1.5em;
+  margin: 0;
+}
+
+.bold {
   font-weight: bold;
 }
 
-.sm-screen {
+footer {
+  border-top: 1px solid black;
+  padding-bottom: 1em;
+}
 
+footer .name {float: left;}
+
+.sm-screen,
+.mdlg-screen{
   float: right;
-  font-size: 0.9em;
 }
 
 /*MEDIA QUERIES =============*/
 @media (min-width:320px) {
-
-
-  .intro img {
-    width: 75%;
+  .col {
+    padding-bottom: 2.5em;
   }
 
   .mdlg-screen {
     display: none;
   }
-
   .clearfix::after {
     content:"";
     display: table;
@@ -95,49 +110,61 @@ body {
 }
 
 @media (min-width: 768px) {
-
-  .name, li{
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .main-nav li {
     display: inline-block;
-  }
-
-  li {
     background: lightgrey;
-  }
-
-  .intro img {
-    float: right;
-    width: 50%;
     padding-left: 1em;
+    padding-right: 1em;
   }
 
-  .intro p {
-    font-size: 1.3em;
+  #intro img {
+    width: 45%;
+    float: right;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+  }
+
+  #intro p {
+    font-size: 1.5em;
     text-align: left;
-
   }
 
-  .content {
+  .col {
     display: inline-block;
     width: 50%;
     margin-right: -4px;
+    padding-right: 15px;
     vertical-align: top;
-    padding: 0 1em;
   }
 
   #contact {
-    width: 60%;
+    width: 50%;
+    margin: 0 auto;
   }
 
-  #footer {
-    padding-bottom: 2em;
+  .footer-nav li {
+      display: inline-block;
+      padding-top: 20px;
+      padding-left: 20px;
+      background-color: lightgrey;
   }
 
-  .sm-screen {display: none;}
+  /*Hide/Display divs===========*/
+
+  .sm-screen {
+    display: none;
+  }
+
   .mdlg-screen {
     display: block;
-    float: right;
+    overflow: visible;
   }
 
+/*clearfix =====================*/
   .clearfix::after {
     content:"";
     display: table;
@@ -147,6 +174,42 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .name {float: left;}
-  ul {float: right;}
+  header .name {float: left;}
+  header nav {
+    float: right;
+    padding-top: 10px;
+  }
+
+  .main-nav li {
+    display: inline-block;
+    background: lightgrey;
+    padding: 0 0 0 3em;
+  }
+
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #intro p {
+    font-size: 2em;
+    text-align: left;
+  }
+  #portfolio {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  #portfolio .wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .col {
+    display: inline-block;
+    width: 33%;
+    margin-right: 0;
+    padding: 0 6px 40px;
+    vertical-align: top;
+  }
 }
