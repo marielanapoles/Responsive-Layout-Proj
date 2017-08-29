@@ -1,9 +1,14 @@
 * {
   box-sizing: border-box;
-  font-family: 'Catamaran', monospace, sans-serif;
 }
 
 /*BASE STYLE=================*/
+h1 {
+  font-family: 'Cookie',monospace, cursive;
+  font-size: 2em;
+}
+
+header h1 { font-size: 3em;}
 a {display: block;}
 
 li {
@@ -17,6 +22,7 @@ li {
 body {
   background-color: #F5F5F5;
   text-align: center;
+  font-family: 'Catamaran', monospace, sans-serif;
 }
 
 .wrapper {
@@ -88,13 +94,12 @@ header h1 {
 
 footer {
   border-top: 1px solid grey;
-  padding-bottom: 1em;
 }
 
 footer .name {float: left;}
 
-.sm-screen a {
-  padding-top: 10px;
+footer .sm-screen a {
+  padding-top: 15px;
 }
 
 .sm-screen,
@@ -106,15 +111,27 @@ footer .name {float: left;}
   display: none;
 }
 
+/*clearfix =====================*/
+  .clearfix::after {
+    content:"";
+    display: table;
+    clear: both;
+  }
+
 /*MEDIA QUERIES =============*/
 @media (min-width: 768px) {
+  a:hover {
+    padding-bottom: 5px;
+    border-bottom: 5px solid black;
+  }
+
   .wrapper {
     width: 90%;
     margin: 0 auto;
   }
   .main-nav li {
     display: inline-block;
-    background: #727272;
+    background: #F5F5F5;
     padding-left: 1em;
     padding-right: 1em;
   }
@@ -144,15 +161,15 @@ footer .name {float: left;}
     margin: 0 auto;
   }
 
+
   .footer-nav li {
       display: inline-block;
       padding-top: 20px;
       padding-left: 20px;
-      background-color: #727272;
+      background: #F5F5F5;
   }
 
   /*Hide/Display divs===========*/
-
   .sm-screen {
     display: none;
   }
@@ -160,27 +177,20 @@ footer .name {float: left;}
   .mdlg-screen {
     display: block;
     overflow: visible;
+    padding-top: 12px;
   }
-
-/*clearfix =====================*/
-  .clearfix::after {
-    content:"";
-    display: table;
-    clear: both;
-  }
-
 }
 
 @media (min-width: 1024px) {
   header .name {float: left;}
   header nav {
     float: right;
-    padding-top: 10px;
+    padding-top: 25px;
   }
 
   .main-nav li {
     display: inline-block;
-    background: #727272;
+    background: #F5F5F5;
     padding: 0 0 0 3em;
   }
 
