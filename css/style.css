@@ -120,8 +120,12 @@ footer .sm-screen a {
 
 /*MEDIA QUERIES =============*/
 @media (min-width: 768px) {
-  a:hover {
+  nav a {
     padding-bottom: 5px;
+    border-bottom: 5px solid transparent;
+  }
+
+  nav a:hover {
     border-bottom: 5px solid black;
   }
 
